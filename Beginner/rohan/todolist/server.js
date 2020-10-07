@@ -6,21 +6,19 @@ const dotenv = require('dotenv').config();
 
 app.use(express.json());
 
-let MONGODB_PASSWORD, MONGODB_NAME;
+let MONGODB_URL;
 
 // serve static assets if in production
 if (process.env.NODE_ENV === 'production') {
-  MONGODB_PASSWORD = process.env.MONGODB_PASSWORD;
-  MONGODB_NAME = process.env.MONGODB_NAME;
+  MONGODB_URL = process.env.MONGODB_URL;
 } else {
-  MONGODB_PASSWORD = process.env.MONGODB_PASSWORD;
-  MONGODB_NAME = process.env.MONGODB_NAME;
+  MONGODB_URL = process.env.MONGODB_URL;
 }
 
 // PORT
 const PORT = process.env.PORT || 5000;
 
-const dbURL = `mongodb+srv://rohan:${MONGODB_PASSWORD}@rohan.zcxu1.mongodb.net/${MONGODB_NAME}?retryWrites=true&w=majority`;
+const dbURL = MONGODB_URL;
 
 mongoose
   .connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })

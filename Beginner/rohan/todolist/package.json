@@ -2,10 +2,13 @@
   "name": "todolist",
   "version": "1.0.0",
   "description": "Todo List App with MERN stack",
-  "main": "serer.js",
+  "main": "server.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "client": " npm start --prefix client",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Rohan Shakya",
   "license": "MIT",
