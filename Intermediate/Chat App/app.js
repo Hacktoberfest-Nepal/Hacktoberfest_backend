@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const sockets = require("socket.io");
-
+var PORT = process.env.PORT || 3000;
 app = express()
 app.set("view engine","ejs")
 app.use(
@@ -12,7 +12,7 @@ app.get("/",(req,res)=>{
     res.render("index.ejs");
 })
 
-const server = app.listen(3000,()=>console.log("Listening on port "+3000))
+const server = app.listen(PORT,()=>console.log("Listening on port "+3000))
 
 const io = sockets(server);
 
