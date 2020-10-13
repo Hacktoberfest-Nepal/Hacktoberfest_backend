@@ -2,4 +2,4 @@
 A simple chat app made with nodejs and sockets.
 
 ## Screenshots
-<img src="/assets/scrshot.png" />
+<img src="./assets/scrshot.png" />
