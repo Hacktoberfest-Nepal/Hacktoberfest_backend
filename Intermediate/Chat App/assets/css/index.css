@@ -2,13 +2,13 @@
   box-sizing: border-box;
 }
 
-body{
-    overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 
 .mytext {
   border: 0;
-  border:1px unset black;
+  border: 1px unset black;
   padding-left: 5px;
   background: whitesmoke;
 }
@@ -51,7 +51,7 @@ body{
 
 .avatar > img {
   width: 50px;
-  height:50px;
+  height: 50px;
   border-radius: 50%;
 }
 
@@ -153,35 +153,33 @@ input:focus {
   background-color: red;
 }
 
-.select-avatar{
-    font-size: 20px;
+.select-avatar {
+  font-size: 20px;
 }
 
-.avatars{
-    margin:5px;
-    width:50px;
-    height:50px;
-    border-radius: 50%;
+.avatars {
+  margin: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
-.avatars.current{
-    animation: animationBorder 1s infinite ease-in-out;
+.avatars.current {
+  animation: animationBorder 1s infinite ease-in-out;
 }
 
-@keyframes animationBorder{
-    0%{
-        border:1px solid rgb(228, 228, 228);
-    }
-    50%{
-        border:10px solid rgb(255, 162, 55);
-    }
-    100%{
-        border:1px solid rgb(255, 161, 55);
-
-    }
-
+@keyframes animationBorder {
+  0% {
+    border: 1px solid rgb(228, 228, 228);
+  }
+  50% {
+    border: 10px solid rgb(255, 162, 55);
+  }
+  100% {
+    border: 1px solid rgb(255, 161, 55);
+  }
 }
 
-#form{
-    width:100%;
+#form {
+  width: 100%;
 }
