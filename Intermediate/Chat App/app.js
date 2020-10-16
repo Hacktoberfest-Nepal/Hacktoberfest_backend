@@ -16,14 +16,14 @@ const server = app.listen(PORT, () => console.log("Listening on port " + 3000));
 
 const io = sockets(server);
 
-io.on("connection", (socket) => {
+io.on("connection", socket => {
   socket.emit("message", {
     username: "Nodejs Server",
     message: "Welcome to nodejs Chat app. Your id is " + socket.id,
     pic:
       "https://previews.123rf.com/images/goodzone95/goodzone951803/goodzone95180300023/96668201-chatbot-icon-cute-robot-working-behind-laptop-modern-bot-sign-design-smiling-customer-service-robot-.jpg",
   });
-  socket.on("chatmsg", (data) => {
+  socket.on("chatmsg", data => {
     socket.broadcast.emit("message", {
       message: data.message,
       username: data.username,
