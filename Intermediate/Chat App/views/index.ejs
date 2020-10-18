@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App nodejs</title>
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body>
+    <div class="row m-0 p-0">
+      <div class="col-sm-10 col-lg-9 col-10 frame">
+        <ul></ul>
+        <div>
+          <form id="form">
+            <div class="text" style="background: whitesmoke !important">
+              <input
+                class="mytext"
+                id="chat-text"
+                placeholder="Type a message"
+              />
+            </div>
+          </form>
+          <div style="padding: 10px">
+            <span class="glyphicon glyphicon-share-alt"></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-2 col-2 p-0 p-lg-2">
+        <small class="select-avatar">Choose your avatar</small>
+        <div class="p-lg-2 p-0 d-flex .flex-wrap flex-lg-row flex-column">
+          <!-- Add more links here to the different avatars 
+        Make sure you add avatars classname to it
+        -->
+          <img
+            class="avatars current"
+            src="https://image.freepik.com/free-vector/profile-icon-male-avatar-hipster-man-wear-headphones_48369-8728.jpg"
+          />
+          <img
+            class="avatars"
+            src="https://store.playstation.com/store/api/chihiro/00_09_000/container/CA/en/999/UP2538-CUSA05620_00-AV00000000000202/1601167372000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000"
+          />
+          <img
+            src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png"
+            alt=""
+            class="avatars"
+          />
+          <img
+            src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
+            alt=""
+            class="avatars"
+          />
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"
+      integrity="sha512-AcZyhRP/tbAEsXCCGlziPun5iFvcSUpEz2jKkx0blkYKbxU81F+iq8FURwPn1sYFeksJ+sDDrI5XujsqSobWdQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/chat.js" type="text/javascript"></script>
+    <script src="js/sockets.js" type="text/javascript"></script>
+  </body>
+</html>
